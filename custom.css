@@ -1,0 +1,8 @@
+/* (C) Copyright Bobbing Wide 2011-2015 */
+.header-image .site-title > a { min-height: 107px; }
+.site-header .widget-area { font-size: 180%; }
+.site-header .widget-area span.value { clear: left; font-size: 120%; display: block; }
+.bw_thumbnail a img { padding: 19px 26px; }
+
+.callback { font-weight: bold; }
+li.callback.menu-item { border: 5px dotted  #e5554c ; }
