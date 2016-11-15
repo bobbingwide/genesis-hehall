@@ -73,8 +73,8 @@ function hehall_loaded() {
 	//* Add support for custom header
 	// @TODO Adjust size in stylesheet?
 	add_theme_support( 'custom-header', array(
-		'width'           => 360,
-		'height'          => 70,
+		'width'           => 517,
+		'height'          => 82,
 		'header-selector' => '.site-title a',
 		'header-text'     => false,
 		) );

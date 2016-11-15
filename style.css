@@ -967,10 +967,10 @@ img.alignright,
 	background-color: #fff;
 	min-height: 160px;
 	
- /* position: fixed;
+  position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 999;	*/
+	z-index: 999;	
 }
 
 
@@ -979,7 +979,7 @@ img.alignright,
 }
 
 .site-header .wrap {
-	padding: 40px 0;
+	padding: 5px 0;
 }
 
 /* ## Title Area
@@ -988,7 +988,7 @@ img.alignright,
 .title-area {
 	float: left;
 	padding: 10px 0;
-	width: 360px;
+	width: 517px;
 }
 
 .header-full-width .title-area {
@@ -1011,6 +1011,7 @@ img.alignright,
 	float: left;
 	min-height: 60px;
 	width: 100%;
+	background-size: auto;
 }
 
 .site-description {
@@ -1037,6 +1038,7 @@ img.alignright,
 	float: right;
 	text-align: right;
 	width: 50%;
+	padding-top: 20px;
 }
 
 
@@ -1582,7 +1584,7 @@ li.comment {
 		width: 300px;
 	}
 	.title-area {
-		width: 360px;
+		width: 517px;
 	}
 
 	.footer-widgets-1 {
