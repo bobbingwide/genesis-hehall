@@ -1,7 +1,9 @@
-/* (C) Copyright Bobbing Wide 2011-2015 */
-.header-image .site-title > a { min-height: 107px; }
-.site-header .widget-area { font-size: 180%; }
-.site-header .widget-area span.value { clear: left; font-size: 120%; display: block; }
+/* (C) Copyright Bobbing Wide 2011-2016
+ */
+.header-image .site-title > a { min-height: 82px; }
+
+.site-header .widget-area { font-size: 150%; }
+.site-header .widget-area span.value { font-size: 120%; font-weight: bold;  }
 .bw_thumbnail a img { padding: 19px 26px; }
 
 .callback { font-weight: bold; }

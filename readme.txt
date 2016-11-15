@@ -1,18 +1,61 @@
-readme.txt 
+=== genesis-hehall ===
+Contributors: bobbingwide
+Donate link: http://www.oik-plugins.com/oik/oik-donate/
+Tags: genesis, one-column, two-columns, sidebars, responsive-layout, accessibility-ready, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments
+Requires at least: 4.6
+Tested up to: 4.7-beta3
+Version: 0.1.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-# Genesis Theme for Halls Garage
+Genesis Child Theme for Halls Garage Services
 
-Github project link: https://github.com/copyblogger/genesis-sample
+== Description ==
+genesis-hehall is a child theme for the Genesis Theme Framework,
+
+* with a front-page implementing parallax scrolling
+* and a responsive menu
+
+== Installation ==
+
+1. Purchase and Install the Genesis parent theme
+2. Download the genesis-hehall child theme
+3. Install the genesis-hehall child theme
+4. Activate the genesis-hehall child theme
+5. Navigate to Appearance > Customize in your admin panel and customize to taste.
+6. Navigate to Genesis > Theme Settings to set other options
+7. Optionally, install and activate a range of oik-based plugins.
 
 
-## Installation Instructions
+== Change Log ==
+= 0.1.0 =
+* Added: front-page with parallax scrolling and responsive menu
+* Tested: With WordPress 4.7-beta3 and Genesis 2.4.2
+ 
+= undefined =
+* Added: Initially created 19 May 2015 for hehallrowlands.com 
+* Changed: Touched on 4th May 2016.
+* Tested: With Genesis 2.1.2  
 
-1. Upload the Genesis Sample theme folder via FTP to your wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
-2. Go to your WordPress dashboard and select Appearance.
-3. Activate the Genesis Sample theme.
-4. Inside your WordPress dashboard, go to Genesis > Theme Settings and configure them to your liking.
+ 
+== Copyright ==
+(C) Copyright Bobbing Wide 2015,2016
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+genesis-hehall does not bundle third-party resources.
+
+== Notes ==
+* Dependent upon the Genesis Theme Framework
+* Uses genesis-footer-widgets and other oik plugins.
 
 
-## Theme Support
 
-Please visit http://my.studiopress.com/help/ for theme support.
