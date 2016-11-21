@@ -1,6 +1,11 @@
 /* (C) Copyright Bobbing Wide 2011-2016
  */
-.header-image .site-title > a { min-height: 82px; }
+ 
+.header-image .site-title > a {
+	 width: 100%; 
+	 float: left; 
+	 height: 60px;;
+}
 
 .site-header .widget-area { font-size: 150%; }
 .site-header .widget-area span.value { font-size: 120%; font-weight: bold;  }
