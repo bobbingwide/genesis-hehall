@@ -542,20 +542,25 @@ th {
 /* ## Site Containers
 --------------------------------------------- */
 
-.site-inner,
-.wrap {
+.site-inner {
 	margin: 0 auto;
 	max-width: 1200px;
+}
+
+.wrap { 
+	margin: 0 auto;
 }
 
 .site-inner {
 	clear: both;
 	padding-top: 40px;
+	background-color: #ffffff;
 }
 
 .parallax-home .site-inner {
-	margin-top: 70px;
+	margin-top: 0px;
 	max-width: 100%;
+	background-color: #ffffff;
 }
 
 .parallax-landing .site-inner {
@@ -963,18 +968,18 @@ img.alignright,
 /* # Site Header
 ---------------------------------------------------------------------------------------------------- */
 
-.site-header {
-	background-color: #fff;
-	/*
-	min-height: 160px;
+
+.site-container { 
+    width: 100%; 
 	
-  position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 999;	
-	*/
 }
 
+.site-header {
+    background-color: #596572; 
+    padding-top: 20px;
+    padding-left: 20px;
+    
+}
 
 .admin-bar .site-header {
 	top: 32px;
@@ -982,6 +987,11 @@ img.alignright,
 
 .site-header .wrap {
 	padding: 5px 0;
+	background-color: #7493a7;
+  border-top: 20px solid #7493a7;
+  border-left: 50px solid #7493a7;;
+	border-radius: 60px 0 0 0;
+  width: 100%;
 }
 
 /* ## Title Area
@@ -989,8 +999,18 @@ img.alignright,
 
 .title-area {
 	float: left;
-	padding: 10px 0;
-	width: 517px;
+	border: 0px solid white;
+	width: 40%;
+  display: block;
+  background: url(../../uploads/2016/11/Halls-Garage-logo.jpg) no-repeat;
+	background-size: contain;
+  background-position: center center;
+  -moz-background-clip: padding-box;
+  background-clip: content-box;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 30px;
+    
 }
 
 .header-full-width .title-area {
@@ -1010,10 +1030,6 @@ img.alignright,
 
 .header-image .site-title > a {
 	background: url(images/logo.png) no-repeat left;
-	float: left;
-	min-height: 60px;
-	width: 100%;
-	background-size: auto;
 }
 
 .site-description {
@@ -1040,7 +1056,11 @@ img.alignright,
 	float: right;
 	text-align: right;
 	width: 50%;
-	padding-top: 20px;
+}
+
+.site-header .widget-area a {
+	color: #ffffff;
+	padding-right: 10px;
 }
 
 
@@ -1071,6 +1091,7 @@ img.alignright,
 	color: #e5554e;
 }
 
+
 .genesis-nav-menu .sub-menu {
 	left: -9999px;
 	opacity: 0;
@@ -1098,11 +1119,14 @@ img.alignright,
 	margin: -55px 0 0 199px;
 }
 
-.genesis-nav-menu .menu-item:hover {
+.genesis-nav-menu .menu-item:hover,
+.genesis-nav-menu .menu-item.hover {
 	position: static;
 }
 
-.genesis-nav-menu .menu-item:hover > .sub-menu {
+.genesis-nav-menu .menu-item:hover > .sub-menu,
+.genesis-nav-menu .menu-item.hover > .sub-menu
+ {
 	left: auto;
 	opacity: 1;
 }
@@ -1631,7 +1655,8 @@ li.comment {
 	}
 
 	.site-header .wrap {
-		padding: 20px 5%;
+		padding: 20px 5% 0 0;
+		width: 100%;
 	}
 
 	.header-image .title-area {
