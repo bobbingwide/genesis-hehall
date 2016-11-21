@@ -78,12 +78,14 @@ function hehall_loaded() {
 
 	//* Add support for custom header
 	// @TODO Adjust size in stylesheet?
+	/*
 	add_theme_support( 'custom-header', array(
 		'width'           => 517,
 		'height'          => 82,
 		'header-selector' => '.site-title a',
 		'header-text'     => false,
 		) );
+	*/
 
 	//* Add support for structural wraps
 	add_theme_support( 'genesis-structural-wraps', array(
