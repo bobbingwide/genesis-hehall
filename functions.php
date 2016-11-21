@@ -60,6 +60,7 @@ function hehall_loaded() {
 	//* Reposition the secondary navigation menu to after the footer
 	// We probably don't need this
 	remove_action( 'genesis_after_header', 'genesis_do_subnav' );
+	add_action( 'genesis_footer', 'hehall_after_footer', 7 );
 	add_action( 'genesis_footer', 'genesis_do_subnav', 7 );
 
 	//* Reduce the secondary navigation menu to one level depth
@@ -165,7 +166,7 @@ function hehall_secondary_menu_args( $args ){
 }
 
 /**
- * Register the front-page widget areas
+ * Register the widget areas
  */
 function hehall_widget_areas() {
 	for ( $i = 1; $i <= 5; $i++ ) {
@@ -175,6 +176,10 @@ function hehall_widget_areas() {
 			,'description' => "This is home section $i"
 		) );
 	}
+	
+	genesis_register_sidebar( array( 'id' => "after-footer", 'name' => 'After footer', 'description' => "After footer widget area" ) );
+
+		
 	//genesis_register_sidebar( array(
 	//	'id'          => 'after-entry',
 	//	'name'        => __( 'After Entry', 'parallax' ),
@@ -183,4 +188,12 @@ function hehall_widget_areas() {
 
 
 }	
+
+function hehall_after_footer() {
+
+	genesis_widget_area( 'after-footer', array(
+		'before' => '<div class="after-footer widget-area"><div class="wrap">',
+		'after'  => '</div></div>',
+	) );
+}
 
