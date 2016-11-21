@@ -1077,6 +1077,7 @@ img.alignright,
 	font-size: 16px;
 	line-height: 1;
 	width: 100%;
+	text-align: center;
 }
 
 .genesis-nav-menu .menu-item {
@@ -1548,11 +1549,12 @@ li.comment {
 .footer-widgets-1,
 .footer-widgets-2,
 .footer-widgets-3 {
-	width: 340px;
+	width: 30%;
 }
 
 .footer-widgets-1 {
 	margin-right: 60px;
+	padding-left: 60px;
 }
 
 .footer-widgets-1,
@@ -1572,13 +1574,27 @@ li.comment {
 	background-color: #fff;
 	font-size: 16px;
 	line-height: 1;
-	padding: 40px 0;
+	padding: 0px 0;
 	text-align: center;
 }
 
 .site-footer p {
 	margin-bottom: 0;
 }
+
+
+.after-footer {
+    background-color: #596572; 
+    padding: 20px 0 20px 0;
+		color: #ffffff;
+    
+}
+
+.footer-widgets .wrap {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+	
 
 
 /* # Media Queries
@@ -1614,7 +1630,7 @@ li.comment {
 	.footer-widgets-2,
 	.footer-widgets-3,
 	.sidebar-primary {
-		width: 300px;
+		width: 30%;
 	}
 
 	.footer-widgets-1 {
@@ -1699,6 +1715,11 @@ li.comment {
 
 	.footer-widgets-1 {
 		margin-right: 0;
+		padding-left: 0px;
+	}
+	
+	.footer-widgets .wrap {
+		padding: 60px;
 	}
 
 }
@@ -1710,8 +1731,7 @@ li.comment {
 		font-size: 16px;
 	}
 
-	.site-inner,
-	.wrap {
+	.site-inner {
 		padding-left: 5%;
 		padding-right: 5%;
 	}
@@ -1761,8 +1781,7 @@ li.comment {
 		width: 100%;
 	}
 
-	.site-inner,
-	.wrap {
+	.site-inner {
 		padding: 0 5%;
 	}
 
