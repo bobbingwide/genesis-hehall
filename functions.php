@@ -10,7 +10,13 @@ function hehall_loaded() {
 	//* Child theme (do not remove)
 	define( 'CHILD_THEME_NAME', 'Halls Garage' );
 	define( 'CHILD_THEME_URL', 'http://www.bobbingwide.com/oik-themes' );
-	define( 'CHILD_THEME_VERSION', '0.1.0' );
+	
+	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+		$timestamp = filemtime( get_stylesheet_directory() . "/style.css" );
+		define( 'CHILD_THEME_VERSION', $timestamp );
+	} else { 
+		define( 'CHILD_THEME_VERSION', '0.1.0' );
+	}
 	
 	//* Start the engine - we only need to do this if we want to invoke genesis_ functions
   include_once( get_template_directory() . '/lib/init.php' );
