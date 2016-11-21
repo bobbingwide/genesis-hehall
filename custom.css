@@ -13,3 +13,10 @@
 
 .callback { font-weight: bold; }
 li.callback.menu-item { border: 5px dotted  #e5554c ; }
+
+.footer-widgets .genericon { 
+	font-size: 30px;
+	line-height: 1.625em;
+}
+
+span.country-name { display: none; }
