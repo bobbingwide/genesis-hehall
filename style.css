@@ -1028,8 +1028,13 @@ img.alignright,
 	color: #333;
 }
 
-.header-image .site-title > a {
-	background: url(images/logo.png) no-repeat left;
+.site-title  a {
+	background: none;
+	    background-size: contain;
+    background-position: center center;
+    -moz-background-clip: padding-box;
+    background-clip: content-box;
+	
 }
 
 .site-description {
@@ -1055,7 +1060,7 @@ img.alignright,
 .site-header .widget-area {
 	float: right;
 	text-align: right;
-	width: 50%;
+	width: 60%;
 }
 
 .site-header .widget-area a {
@@ -1581,9 +1586,12 @@ li.comment {
 
 @media only screen and (max-width: 1200px) {
 
-	.site-inner,
-	.wrap {
+	.site-inner {
 		max-width: 960px;
+	}
+	
+	.wrap { 
+		margin: 0 auto;
 	}
 
 	.content-sidebar-sidebar .content-sidebar-wrap,
@@ -1592,8 +1600,7 @@ li.comment {
 		width: 740px;
 	}
 
-	.content,
-	.site-header .widget-area {
+	.content {
 		width: 620px;
 	}
 
@@ -1608,9 +1615,6 @@ li.comment {
 	.footer-widgets-3,
 	.sidebar-primary {
 		width: 300px;
-	}
-	.title-area {
-		width: 517px;
 	}
 
 	.footer-widgets-1 {
@@ -1632,9 +1636,11 @@ li.comment {
 
 @media only screen and (max-width: 960px) {
 
-	.site-inner,
-	.wrap {
+	.site-inner {
 		max-width: 800px;
+	}
+	.wrap {
+		margin: 0 auto;
 	}
 
 	.content,
@@ -1880,6 +1886,29 @@ li.comment {
 
 
 @media only screen and (max-width: 480px) {
+
+
+
+	.site-header .wrap {
+		padding: 5px 0px; 
+		border: 0px;
+		border-radius: 0px;
+	}
+	
+	.site-header .widget-area {
+		width: 100%;
+	}
+	
+	.site-header .widget-area span.type,
+	.site-header .widget-area span.sep {
+		display: none;
+	}
+	
+	.title-area { 
+		width: 100%;
+		max-width: 100%;
+		padding: 0px;
+	}
 
 	.footer-widgets .widget-title,
 	.home-even .widget-title,
