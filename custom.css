@@ -17,6 +17,8 @@ li.callback.menu-item { border: 5px dotted  #e5554c ; }
 .footer-widgets .genericon { 
 	font-size: 30px;
 	line-height: 1.625em;
+	padding: 0 10px;
+	border: 2px solid #999;
 }
 
 span.country-name { display: none; }
