@@ -553,7 +553,7 @@ th {
 
 .site-inner {
 	clear: both;
-	padding-top: 40px;
+	padding-top: 20px;
 	background-color: #ffffff;
 }
 
@@ -1064,6 +1064,7 @@ img.alignright,
 	display: block;
 	text-indent: -9999px;
 }
+
 
 /* ## Widget Area
 --------------------------------------------- */
@@ -1688,17 +1689,30 @@ li.comment {
 	.sidebar-sidebar-content .content,
 	.sidebar-sidebar-content .content-sidebar-wrap,
 	.site-header .widget-area,
-	.title-area {
+	.title-area,
+	.hmta {
 		width: 100%;
+	}
+	
+	.hmta,
+	.title-area {
+		border-radius: 0;
+		border: 0;
+		margin-left: 3%;
+		background-color: #ffffff;
 	}
 
 	.site-header .wrap {
 		padding: 20px 5% 0 0;
 		width: 100%;
 	}
+	
+	.site-header .widget-area {
+		border: 0px;
+	}
 
 	.header-image .title-area {
-		background-position: center top;
+		background-position: left top;
 	}
 
 	.genesis-nav-menu li,
@@ -1810,7 +1824,8 @@ li.comment {
 	}
 
 	.nav-primary .responsive-menu-icon {
-		margin-top: 20px;
+		margin-top: 10px;
+		text-align: center;
 	}
 
 	.genesis-nav-menu.responsive-menu .menu-item,
