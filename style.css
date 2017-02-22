@@ -4,7 +4,7 @@ Theme URI: http://www.bobbingwide.com/themes/genesis-hehall
 Description: Child theme of genesis framework for Halls Garage www.hehallrowlands.com 
 Author: Bobbing Wide  
 Author URI: http://www.oik-plugins.com/author/bobbingwide
-Version: 0.1.0
+Version: 0.1.1
 
 Tags: black, white, one-column, two-columns, left-sidebar, right-sidebar, responsive-layout, custom-menu, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments
 
@@ -975,7 +975,7 @@ img.alignright,
 }
 
 .site-header {
-    background-color: #596572; 
+    background-color: #002246; 
     padding-top: 20px;
     padding-left: 20px;
     
@@ -985,31 +985,42 @@ img.alignright,
 	top: 32px;
 }
 
+
 .site-header .wrap {
-	padding: 5px 0;
-	background-color: #7493a7;
-  border-top: 20px solid #7493a7;
-  border-left: 50px solid #7493a7;;
-	border-radius: 60px 0 0 0;
-  width: 100%;
+    padding: 5px 0;
+    background-color: #ffffff;
+    border-radius: 58px 0 0 53px;
+    width: 100%;
 }
+		
 
 /* ## Title Area
 --------------------------------------------- */
 
+.hmta {
+    float: left;
+    width: 39%;
+    display: block;
+    border-radius: 39px 0 0 39px;
+    border-top: 8px solid #dddddd;
+    border-left: 0px solid #dddddd;
+    border-bottom: 0px solid white;
+    margin-left: 1%;
+    background-color: #dddddd;
+}
+
 .title-area {
-	float: left;
-	border: 0px solid white;
-	width: 40%;
-  display: block;
-  background: url(../../uploads/2016/11/Halls-Garage-logo.jpg) no-repeat;
+	background: url(images/logo.jpg) no-repeat;
 	background-size: contain;
-  background-position: center center;
+  background-position: 11px 5px;
   -moz-background-clip: padding-box;
   background-clip: content-box;
   height: 60px;
   background-color: #fff;
-  border-radius: 30px;
+	margin-left: 5px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    border-radius: 35px 0 0; 
     
 }
 
@@ -1061,10 +1072,12 @@ img.alignright,
 	float: right;
 	text-align: right;
 	width: 60%;
+	
+  border-top: 8px solid #dddddd;
 }
 
 .site-header .widget-area a {
-	color: #ffffff;
+	color: #555555;
 	padding-right: 10px;
 }
 
@@ -1088,7 +1101,8 @@ img.alignright,
 .genesis-nav-menu a {
 	color: #333;
 	display: block;
-	padding: 30px 24px;
+	padding: 10px 30px;
+	background-color: #eeeeee;
 }
 
 .genesis-nav-menu a:hover,
@@ -1184,11 +1198,13 @@ img.alignright,
 --------------------------------------------- */
 
 .nav-primary {
-	background-color: #333;
+	background-color: #ffffff;
+	margin-top: -12px;
+  border-top: 12px solid white;
 }
 
 .nav-primary .genesis-nav-menu a {
-	color: #fff;
+	color: #333;
 }
 
 .nav-primary .genesis-nav-menu .sub-menu a {
@@ -1198,7 +1214,7 @@ img.alignright,
 .nav-primary .genesis-nav-menu a:hover,
 .nav-primary .genesis-nav-menu .current-menu-item > a,
 .nav-primary .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	color: #e5554e;
+	color: #002246;
 }
 
 /* ## Secondary Navigation
@@ -1218,7 +1234,7 @@ img.alignright,
 }
 
 .responsive-menu-icon::before {
-	color: #fff;
+	color: #002246;
 	content: "\f333";
 	font: normal 24px/1 'dashicons';
 	margin: 0 auto;

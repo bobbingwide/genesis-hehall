@@ -1,4 +1,4 @@
-<?php // (C) Copyright Bobbing Wide 2015,2016
+<?php // (C) Copyright Bobbing Wide 2015,2017
 
 hehall_loaded();
 
@@ -112,6 +112,10 @@ function hehall_loaded() {
 	
 	add_post_type_support( 'page', 'excerpt' );
 	
+	add_filter( "genesis_markup_title-area_open", "hehall_markup_title_area_open", 10, 2 );
+	add_filter( "genesis_markup_title-area_close", "hehall_markup_title_area_close", 10, 2 );
+	
+	
 
 }
 
@@ -197,5 +201,19 @@ function hehall_after_footer() {
 		'before' => '<div class="after-footer widget-area"><div class="wrap">',
 		'after'  => '</div></div>',
 	) );
+}
+
+function hehall_markup_title_area_open( $open, $args ) {
+	if ( !empty( $args['open'] ) ) {
+		$open = '<div class="hmta">' . $open;
+	}
+	return( $open );
+}
+
+function hehall_markup_title_area_close( $close, $args ) {
+	if ( !empty( $args['close'] ) ) {
+		$close .= '</div class=close>';
+	}
+	return( $close );
 }
 
