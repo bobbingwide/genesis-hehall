@@ -1,4 +1,4 @@
-<?php // (C) Copyright Bobbing Wide 2015,2016
+<?php // (C) Copyright Bobbing Wide 2015,2017
 
 hehall_loaded();
 
@@ -10,7 +10,13 @@ function hehall_loaded() {
 	//* Child theme (do not remove)
 	define( 'CHILD_THEME_NAME', 'Halls Garage' );
 	define( 'CHILD_THEME_URL', 'http://www.bobbingwide.com/oik-themes' );
-	define( 'CHILD_THEME_VERSION', '0.1.0' );
+	
+	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+		$timestamp = filemtime( get_stylesheet_directory() . "/style.css" );
+		define( 'CHILD_THEME_VERSION', $timestamp );
+	} else { 
+		define( 'CHILD_THEME_VERSION', '0.1.0' );
+	}
 	
 	//* Start the engine - we only need to do this if we want to invoke genesis_ functions
   include_once( get_template_directory() . '/lib/init.php' );
@@ -54,6 +60,7 @@ function hehall_loaded() {
 	//* Reposition the secondary navigation menu to after the footer
 	// We probably don't need this
 	remove_action( 'genesis_after_header', 'genesis_do_subnav' );
+	add_action( 'genesis_footer', 'hehall_after_footer', 7 );
 	add_action( 'genesis_footer', 'genesis_do_subnav', 7 );
 
 	//* Reduce the secondary navigation menu to one level depth
@@ -72,12 +79,14 @@ function hehall_loaded() {
 
 	//* Add support for custom header
 	// @TODO Adjust size in stylesheet?
+	/*
 	add_theme_support( 'custom-header', array(
 		'width'           => 517,
 		'height'          => 82,
 		'header-selector' => '.site-title a',
 		'header-text'     => false,
 		) );
+	*/
 
 	//* Add support for structural wraps
 	add_theme_support( 'genesis-structural-wraps', array(
@@ -100,6 +109,12 @@ function hehall_loaded() {
 	//
 	//}
 	hehall_widget_areas();
+	
+	add_post_type_support( 'page', 'excerpt' );
+	
+	add_filter( "genesis_markup_title-area_open", "hehall_markup_title_area_open", 10, 2 );
+	add_filter( "genesis_markup_title-area_close", "hehall_markup_title_area_close", 10, 2 );
+	
 	
 
 }
@@ -157,7 +172,7 @@ function hehall_secondary_menu_args( $args ){
 }
 
 /**
- * Register the front-page widget areas
+ * Register the widget areas
  */
 function hehall_widget_areas() {
 	for ( $i = 1; $i <= 5; $i++ ) {
@@ -167,6 +182,10 @@ function hehall_widget_areas() {
 			,'description' => "This is home section $i"
 		) );
 	}
+	
+	genesis_register_sidebar( array( 'id' => "after-footer", 'name' => 'After footer', 'description' => "After footer widget area" ) );
+
+		
 	//genesis_register_sidebar( array(
 	//	'id'          => 'after-entry',
 	//	'name'        => __( 'After Entry', 'parallax' ),
@@ -175,4 +194,26 @@ function hehall_widget_areas() {
 
 
 }	
+
+function hehall_after_footer() {
+
+	genesis_widget_area( 'after-footer', array(
+		'before' => '<div class="after-footer widget-area"><div class="wrap">',
+		'after'  => '</div></div>',
+	) );
+}
+
+function hehall_markup_title_area_open( $open, $args ) {
+	if ( !empty( $args['open'] ) ) {
+		$open = '<div class="hmta">' . $open;
+	}
+	return( $open );
+}
+
+function hehall_markup_title_area_close( $close, $args ) {
+	if ( !empty( $args['close'] ) ) {
+		$close .= '</div class=close>';
+	}
+	return( $close );
+}
 

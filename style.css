@@ -4,7 +4,7 @@ Theme URI: http://www.bobbingwide.com/themes/genesis-hehall
 Description: Child theme of genesis framework for Halls Garage www.hehallrowlands.com 
 Author: Bobbing Wide  
 Author URI: http://www.oik-plugins.com/author/bobbingwide
-Version: 0.1.0
+Version: 0.1.1
 
 Tags: black, white, one-column, two-columns, left-sidebar, right-sidebar, responsive-layout, custom-menu, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments
 
@@ -542,20 +542,25 @@ th {
 /* ## Site Containers
 --------------------------------------------- */
 
-.site-inner,
-.wrap {
+.site-inner {
 	margin: 0 auto;
 	max-width: 1200px;
 }
 
+.wrap { 
+	margin: 0 auto;
+}
+
 .site-inner {
 	clear: both;
-	padding-top: 40px;
+	padding-top: 20px;
+	background-color: #ffffff;
 }
 
 .parallax-home .site-inner {
-	margin-top: 70px;
+	margin-top: 0px;
 	max-width: 100%;
+	background-color: #ffffff;
 }
 
 .parallax-landing .site-inner {
@@ -963,32 +968,60 @@ img.alignright,
 /* # Site Header
 ---------------------------------------------------------------------------------------------------- */
 
-.site-header {
-	background-color: #fff;
-	min-height: 160px;
+
+.site-container { 
+    width: 100%; 
 	
-  position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 999;	
 }
 
+.site-header {
+    background-color: #002246; 
+    padding-top: 20px;
+    padding-left: 20px;
+    
+}
 
 .admin-bar .site-header {
 	top: 32px;
 }
 
+
 .site-header .wrap {
-	padding: 5px 0;
+    padding: 5px 0;
+    background-color: #ffffff;
+    border-radius: 58px 0 0 53px;
+    width: 100%;
 }
+		
 
 /* ## Title Area
 --------------------------------------------- */
 
+.hmta {
+    float: left;
+    width: 39%;
+    display: block;
+    border-radius: 39px 0 0 39px;
+    border-top: 8px solid #dddddd;
+    border-left: 0px solid #dddddd;
+    border-bottom: 0px solid white;
+    margin-left: 1%;
+    background-color: #dddddd;
+}
+
 .title-area {
-	float: left;
-	padding: 10px 0;
-	width: 517px;
+	background: url(images/logo.jpg) no-repeat;
+	background-size: contain;
+  background-position: 11px 5px;
+  -moz-background-clip: padding-box;
+  background-clip: content-box;
+  height: 60px;
+  background-color: #fff;
+	margin-left: 5px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    border-radius: 35px 0 0; 
+    
 }
 
 .header-full-width .title-area {
@@ -1006,12 +1039,13 @@ img.alignright,
 	color: #333;
 }
 
-.header-image .site-title > a {
-	background: url(images/logo.png) no-repeat left;
-	float: left;
-	min-height: 60px;
-	width: 100%;
-	background-size: auto;
+.site-title  a {
+	background: none;
+	    background-size: contain;
+    background-position: center center;
+    -moz-background-clip: padding-box;
+    background-clip: content-box;
+	
 }
 
 .site-description {
@@ -1031,14 +1065,21 @@ img.alignright,
 	text-indent: -9999px;
 }
 
+
 /* ## Widget Area
 --------------------------------------------- */
 
 .site-header .widget-area {
 	float: right;
 	text-align: right;
-	width: 50%;
-	padding-top: 20px;
+	width: 60%;
+	
+  border-top: 8px solid #dddddd;
+}
+
+.site-header .widget-area a {
+	color: #555555;
+	padding-right: 10px;
 }
 
 
@@ -1050,6 +1091,7 @@ img.alignright,
 	font-size: 16px;
 	line-height: 1;
 	width: 100%;
+	text-align: center;
 }
 
 .genesis-nav-menu .menu-item {
@@ -1060,7 +1102,8 @@ img.alignright,
 .genesis-nav-menu a {
 	color: #333;
 	display: block;
-	padding: 30px 24px;
+	padding: 10px 30px;
+	background-color: #eeeeee;
 }
 
 .genesis-nav-menu a:hover,
@@ -1068,6 +1111,7 @@ img.alignright,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
 	color: #e5554e;
 }
+
 
 .genesis-nav-menu .sub-menu {
 	left: -9999px;
@@ -1096,11 +1140,14 @@ img.alignright,
 	margin: -55px 0 0 199px;
 }
 
-.genesis-nav-menu .menu-item:hover {
+.genesis-nav-menu .menu-item:hover,
+.genesis-nav-menu .menu-item.hover {
 	position: static;
 }
 
-.genesis-nav-menu .menu-item:hover > .sub-menu {
+.genesis-nav-menu .menu-item:hover > .sub-menu,
+.genesis-nav-menu .menu-item.hover > .sub-menu
+ {
 	left: auto;
 	opacity: 1;
 }
@@ -1152,11 +1199,13 @@ img.alignright,
 --------------------------------------------- */
 
 .nav-primary {
-	background-color: #333;
+	background-color: #ffffff;
+	margin-top: -12px;
+  border-top: 12px solid white;
 }
 
 .nav-primary .genesis-nav-menu a {
-	color: #fff;
+	color: #333;
 }
 
 .nav-primary .genesis-nav-menu .sub-menu a {
@@ -1166,7 +1215,7 @@ img.alignright,
 .nav-primary .genesis-nav-menu a:hover,
 .nav-primary .genesis-nav-menu .current-menu-item > a,
 .nav-primary .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	color: #e5554e;
+	color: #002246;
 }
 
 /* ## Secondary Navigation
@@ -1186,7 +1235,7 @@ img.alignright,
 }
 
 .responsive-menu-icon::before {
-	color: #fff;
+	color: #002246;
 	content: "\f333";
 	font: normal 24px/1 'dashicons';
 	margin: 0 auto;
@@ -1517,11 +1566,12 @@ li.comment {
 .footer-widgets-1,
 .footer-widgets-2,
 .footer-widgets-3 {
-	width: 340px;
+	width: 30%;
 }
 
 .footer-widgets-1 {
 	margin-right: 60px;
+	padding-left: 60px;
 }
 
 .footer-widgets-1,
@@ -1541,7 +1591,7 @@ li.comment {
 	background-color: #fff;
 	font-size: 16px;
 	line-height: 1;
-	padding: 40px 0;
+	padding: 0px 0;
 	text-align: center;
 }
 
@@ -1550,14 +1600,31 @@ li.comment {
 }
 
 
+.after-footer {
+    background-color: #596572; 
+    padding: 20px 0 20px 0;
+		color: #ffffff;
+    
+}
+
+.footer-widgets .wrap {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+	
+
+
 /* # Media Queries
 ---------------------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 1200px) {
 
-	.site-inner,
-	.wrap {
+	.site-inner {
 		max-width: 960px;
+	}
+	
+	.wrap { 
+		margin: 0 auto;
 	}
 
 	.content-sidebar-sidebar .content-sidebar-wrap,
@@ -1566,8 +1633,7 @@ li.comment {
 		width: 740px;
 	}
 
-	.content,
-	.site-header .widget-area {
+	.content {
 		width: 620px;
 	}
 
@@ -1581,10 +1647,7 @@ li.comment {
 	.footer-widgets-2,
 	.footer-widgets-3,
 	.sidebar-primary {
-		width: 300px;
-	}
-	.title-area {
-		width: 517px;
+		width: 30%;
 	}
 
 	.footer-widgets-1 {
@@ -1606,9 +1669,11 @@ li.comment {
 
 @media only screen and (max-width: 960px) {
 
-	.site-inner,
-	.wrap {
+	.site-inner {
 		max-width: 800px;
+	}
+	.wrap {
+		margin: 0 auto;
 	}
 
 	.content,
@@ -1624,16 +1689,30 @@ li.comment {
 	.sidebar-sidebar-content .content,
 	.sidebar-sidebar-content .content-sidebar-wrap,
 	.site-header .widget-area,
-	.title-area {
+	.title-area,
+	.hmta {
 		width: 100%;
+	}
+	
+	.hmta,
+	.title-area {
+		border-radius: 0;
+		border: 0;
+		margin-left: 3%;
+		background-color: #ffffff;
 	}
 
 	.site-header .wrap {
-		padding: 20px 5%;
+		padding: 20px 5% 0 0;
+		width: 100%;
+	}
+	
+	.site-header .widget-area {
+		border: 0px;
 	}
 
 	.header-image .title-area {
-		background-position: center top;
+		background-position: left top;
 	}
 
 	.genesis-nav-menu li,
@@ -1666,6 +1745,11 @@ li.comment {
 
 	.footer-widgets-1 {
 		margin-right: 0;
+		padding-left: 0px;
+	}
+	
+	.footer-widgets .wrap {
+		padding: 60px;
 	}
 
 }
@@ -1677,8 +1761,7 @@ li.comment {
 		font-size: 16px;
 	}
 
-	.site-inner,
-	.wrap {
+	.site-inner {
 		padding-left: 5%;
 		padding-right: 5%;
 	}
@@ -1728,8 +1811,7 @@ li.comment {
 		width: 100%;
 	}
 
-	.site-inner,
-	.wrap {
+	.site-inner {
 		padding: 0 5%;
 	}
 
@@ -1742,7 +1824,8 @@ li.comment {
 	}
 
 	.nav-primary .responsive-menu-icon {
-		margin-top: 20px;
+		margin-top: 10px;
+		text-align: center;
 	}
 
 	.genesis-nav-menu.responsive-menu .menu-item,
@@ -1853,6 +1936,29 @@ li.comment {
 
 
 @media only screen and (max-width: 480px) {
+
+
+
+	.site-header .wrap {
+		padding: 5px 0px; 
+		border: 0px;
+		border-radius: 0px;
+	}
+	
+	.site-header .widget-area {
+		width: 100%;
+	}
+	
+	.site-header .widget-area span.type,
+	.site-header .widget-area span.sep {
+		display: none;
+	}
+	
+	.title-area { 
+		width: 100%;
+		max-width: 100%;
+		padding: 0px;
+	}
 
 	.footer-widgets .widget-title,
 	.home-even .widget-title,
