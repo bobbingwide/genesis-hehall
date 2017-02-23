@@ -30,6 +30,8 @@ genesis-hehall is a child theme for the Genesis Theme Framework,
 == Change Log ==
 = 0.1.1 = 
 * Added: Wrapper around title for new logo / banner heading
+* Changed: Styling of primary menu. Centred responsive menu hamburger
+* Changed: favicon.ico, screenshot.png and logo.jpg, but not logo@2x.jpg
 * Tested: With WordPress 4.7.2
 
 = 0.1.0 =
