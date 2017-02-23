@@ -4,8 +4,8 @@
 * Donate link: http://www.oik-plugins.com/oik/oik-donate/
 * Tags: genesis, one-column, two-columns, sidebars, responsive-layout, accessibility-ready, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments
 * Requires at least: 4.6
-* Tested up to: 4.7-beta4
-* Version: 0.1.0
+* Tested up to: 4.7.2
+* Version: 0.1.1
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,12 @@ genesis-hehall is a child theme for the Genesis Theme Framework,
 
 
 ## Change Log 
+# 0.1.1 
+* Added: Wrapper around title for new logo / banner heading
+* Changed: Styling of primary menu. Centred responsive menu hamburger
+* Changed: favicon.ico, screenshot.png and logo.jpg, but not logo@2x.jpg
+* Tested: With WordPress 4.7.2
+
 # 0.1.0 
 * Added: front-page with parallax scrolling and responsive menu https://github.com/bobbingwide/genesis-hehall/issues/1
 * Added: styled the header and footer more like the company letterhead https://github.com/bobbingwide/genesis-hehall/issues/2
@@ -45,7 +51,7 @@ genesis-hehall is a child theme for the Genesis Theme Framework,
 
 
 ## Copyright 
-(C) Copyright Bobbing Wide 2015,2016
+(C) Copyright Bobbing Wide 2015-2017
 
 * This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
